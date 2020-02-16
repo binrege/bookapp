@@ -1,0 +1,17 @@
+<view class="typeList flex">
+    <view wx:for="{{typeList}}" wx:key="index" class="{{activeIndex===index ? 'selectColor' :''}}" bind:tap="changeBigCategory" data-item="{{item}}" data-index="{{index}}">
+    {{item.name}}
+    </view>
+</view>
+<view class="page-section-spacing" wx:if="{{Minor.length>1}}">
+    <scroll-view   class="scroll-view_H"  scroll-x="true" bindscroll="scroll" style="width: 100%">
+        <view wx:for="{{Minor}}" wx:key="index" class="{{activeMinsIndex===index ? 'selectColor' :''}}" bind:tap="changeMins" data-item="{{item}}" data-index="{{index}}">
+        {{item}}
+        </view>
+    </scroll-view>
+</view>
+<view class="books">
+    
+</view>
+
+

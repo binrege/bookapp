@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "category": "../../component/category/category"
+    },
+    "navigationBarTitleText": "书城",
+    "navigationBarBackgroundColor": "#f46",
+    "navigationBarTextStyle": "white"
+}

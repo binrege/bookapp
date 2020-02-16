@@ -1,14 +1,45 @@
 {
-  "pages": [
-    "pages/index/index",
-    "pages/logs/logs"
-  ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
-  },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+    "pages": [
+        "pages/index/index",
+        "pages/bookCity/bookCity",
+        "pages/search/search",
+        "pages/bookCats/bookCats"
+
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#f46",
+        "navigationBarTitleText": "小说阅读",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "color": "#ccc",
+        "selectedColor": "#f46",
+        "backgroundColor": "#fff",
+        "borderStyle": "black",
+        "list": [{
+                "pagePath": "pages/index/index",
+                "text": "书架",
+                "iconPath": "assets/images/shujia.png",
+                "selectedIconPath": "assets/images/shujia-active.png"
+            },
+
+            {
+                "pagePath": "pages/bookCity/bookCity",
+                "text": "书城",
+                "iconPath": "assets/images/home.png",
+                "selectedIconPath": "assets/images/home-active.png"
+            },
+            {
+                "pagePath": "pages/search/search",
+                "text": "搜索",
+                "iconPath": "assets/images/search.png",
+                "selectedIconPath": "assets/images/search-active.png"
+
+            }
+
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
 }

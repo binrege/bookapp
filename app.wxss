@@ -1,9 +1,13 @@
 .flex {
-    display: flex;
+    display: flex !important;
 }
 
 .f-col {
     flex-direction: column;
+}
+
+.f-wrap {
+    flex-wrap: wrap!important;
 }
 
 .a-center {
@@ -24,4 +28,8 @@
 
 .j-around {
     justify-content: space-around;
+}
+
+.f-1 {
+    flex: 1
 }

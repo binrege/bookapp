@@ -1,0 +1,30 @@
+.typeList {
+    padding-left: 20rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+}
+
+.typeList>view {
+    margin-right: 40rpx;
+}
+
+.selectColor {
+    color: red;
+}
+
+.page-section-spacing view {
+    display: inline-block;
+    margin-right: 40rpx;
+}
+
+.scroll-view_H {
+    padding-left: 20rpx;
+    width: 100%;
+    white-space: nowrap;
+    /* font-size: 28rpx; */
+    margin-right: 30rpx;
+}
+
+.scroll-view_H>view {
+    display: inline-block!important;
+}

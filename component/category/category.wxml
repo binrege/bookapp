@@ -1,0 +1,16 @@
+<view class="contain">
+    <view class="title">
+        {{female.type}}
+    </view>
+    <view class="wrap flex f-wrap" >
+         <view wx:for="{{female.arr}}" wx:key="index" class="item" bind:tap="clickItem" data-item="{{item}}">
+            <view class="itemName">
+                {{item.name}}
+            </view>
+            <view class="itemCont">
+                {{item.bookCount}}本
+            </view>
+        </view>
+    </view>
+   
+</view>

@@ -1,0 +1,22 @@
+<view class="fixed">
+    <view class="flex tab">
+        <view wx:for="{{arr}}" wx:for-index="index" wx:for-item="item" wx:key="index" class="item m-l-1 f-1">
+            <view data-index="{{index}}" bind:tap="clickItem">
+                {{item.name}}
+            </view>
+            <view class="line" wx:if="{{activeIndex===index}}">
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="contant">
+    <view wx:if="{{activeIndex===0}}">
+       <category female='{{male}}'></category>
+       <category female='{{female}}'></category>
+       <category female='{{press}}'></category>
+    </view>    
+    <view wx:if="{{activeIndex===1}}">
+         我是标签2的内容
+    </view>     
+</view>
