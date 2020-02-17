@@ -1,0 +1,10 @@
+<view class="contian">
+    <view class="title">
+        {{chapter.title}}
+    </view>
+      <view>
+           {{chapter.body}}
+      </view>
+        
+</view>
+  

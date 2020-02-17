@@ -33,3 +33,7 @@
 .f-1 {
     flex: 1
 }
+
+.contain {
+    height: 60rpx;
+}

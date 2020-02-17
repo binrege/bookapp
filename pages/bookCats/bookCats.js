@@ -18,33 +18,41 @@ Page({
         type: '',
         start: 1,
         minor: '',
-        books: []
+        books: [],
+        isminor: false
+
     },
-    // scrollToTop() {
-    //     this.setAction({
-    //         scrollTop: 0
-    //     })
-    // },
+    scroll(e) {
+        console.log(e)
+    },
+    scrollToTop() {
+        this.setAction({
+            scrollTop: 0
+        })
+    },
 
-    // tap() {
-    //     for (let i = 0; i < this.data.Minor.length; ++i) {
-    //         if (this.data.Minor[i] === this.data.toView) {
-    //             this.setData({
-    //                 toView: this.data.Minor[i + 1],
-    //                 scrollTop: (i + 1) * 200
-    //             })
-    //             break
-    //         }
-    //     }
-    // },
+    tap() {
+        for (let i = 0; i < this.data.Minor.length; ++i) {
+            if (this.data.Minor[i] === this.data.toView) {
+                this.setData({
+                    toView: this.data.Minor[i + 1],
+                    scrollTop: (i + 1) * 200
+                })
+                break
+            }
+        }
+    },
 
-    // tapMove() {
-    //     this.setData({
-    //         scrollTop: this.data.scrollTop + 10
-    //     })
-    // },
+    tapMove() {
+        this.setData({
+            scrollTop: this.data.scrollTop + 10
+        })
+    },
     changeMins(e) {
         let { index, item } = e.currentTarget.dataset
+        if (item === '全部') {
+            item = ''
+        }
         this.setData({
             activeMinsIndex: index,
             minor: item
@@ -55,12 +63,17 @@ Page({
         let { index, item } = e.currentTarget.dataset
         this.setData({
             activeIndex: index,
-            major: item.id
+            type: item.id
         })
         this.getALlBook(this.data.gender, this.data.major, this.data.type, this.data.minor, this.data.start)
     },
     getALlBook(gender, major, type, minor, start) {
         //@param gender 性别排行（male）type 排行类型（hot）major 大类 minor 小类  start 分页开始 "female", "hot", "古代言情", "穿越时空", "", 1
+        console.log(gender);
+        console.log(major);
+        console.log(type);
+        console.log(minor);
+        console.log(start);
         fly.get(api.classification.getCatsBooks(gender, type, major, minor, start)).then(res => {
             console.log(res);
             this.setData({
@@ -70,6 +83,15 @@ Page({
         }).catch(err => {
             console.log(err);
         })
+    },
+    toDetails(e) {
+        let { item } = e.currentTarget.dataset
+        wx.navigateTo({
+            url: `../details/details?title=详情&bookid=${item._id}`,
+        });
+
+
+
     },
     /**
      * 生命周期函数--监听页面加载
@@ -120,7 +142,15 @@ Page({
                     }
                 })
             }
-
+            if (this.data.Minor.length > 1) {
+                this.setData({
+                    isminor: true
+                })
+            } else {
+                this.setData({
+                    isminor: false
+                })
+            }
         }).catch(err => {
             console.log(err);
         })

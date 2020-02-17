@@ -57,16 +57,17 @@
 			"current": -1,
 			"list": [
 				{
-					"id": -1,
-					"name": "pages/bookCity/bookCity",
-					"pathName": "pages/bookCity/bookCity",
-					"query": "",
+					"id": 0,
+					"name": "pages/details/details",
+					"pathName": "pages/details/details",
+					"query": "title=详情&bookid=5c73969b394b64547486818b",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "pages/bookCats/bookCats",
 					"pathName": "pages/bookCats/bookCats",
+					"query": "",
 					"scene": null
 				}
 			]

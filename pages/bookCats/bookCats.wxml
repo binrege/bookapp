@@ -1,17 +1,49 @@
+<view class="top">
+      
 <view class="typeList flex">
     <view wx:for="{{typeList}}" wx:key="index" class="{{activeIndex===index ? 'selectColor' :''}}" bind:tap="changeBigCategory" data-item="{{item}}" data-index="{{index}}">
     {{item.name}}
     </view>
 </view>
-<view class="page-section-spacing" wx:if="{{Minor.length>1}}">
+<view class="page-section-spacing"  wx:if="{{Minor.length>1}}">
     <scroll-view   class="scroll-view_H"  scroll-x="true" bindscroll="scroll" style="width: 100%">
         <view wx:for="{{Minor}}" wx:key="index" class="{{activeMinsIndex===index ? 'selectColor' :''}}" bind:tap="changeMins" data-item="{{item}}" data-index="{{index}}">
         {{item}}
         </view>
     </scroll-view>
 </view>
+
+  
+</view>
+<view class="{{isminor===true ? 'top3' : 'top2'}}">
+
+</view>
 <view class="books">
-    
+    <view class="bookItem flex" wx:for="{{books}}" wx:key="index" bind:tap="toDetails" data-item="{{item}}">
+        <view class="images">
+            <image class="imgs" mode="widthFix" src="{{'https://statics.zhuishushenqi.com'+item.cover}}"/>
+        </view>
+        <view class="details flex f-col j-around ">
+            <view class="book-title">
+                {{item.title}}
+            </view>
+            <view class="book-author">
+                {{item.author}}
+            </view>
+            <view class="book-desc">
+                {{item.shortIntro}}
+            </view>
+            <view class="book-tags flex f-wrap">
+                <view wx:for="{{item.tags}}" wx:for-item="item1" wx:for-index="index1" wx:key="index1">
+                    {{item1}}
+                </view>
+                    
+            </view>
+                
+        </view>
+            
+            
+    </view>
 </view>
 
 

@@ -1,0 +1,231 @@
+.details {
+    width: 100%;
+    background-color: #ccc;
+    height: 100vh;
+}
+
+.top {
+    width: 100%;
+    height: 150rpx;
+    background-color: #f46;
+}
+
+.middle {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    padding-bottom: 50rpx;
+}
+
+.images {
+    height: 250rpx;
+}
+
+.imgs {
+    position: absolute;
+    width: 100%;
+    top: -150rpx;
+    left: 30%;
+}
+
+.imgs {
+    box-shadow: -1rpx 2rpx 6rpx rgba(0, 0, 0, .5);
+    width: 40%;
+}
+
+.booktitle {
+    text-align: center;
+    font-size: 32rpx;
+    font-weight: 600;
+    margin: 10rpx 0 15rpx 0;
+}
+
+.book-author {
+    text-align: center;
+    font-size: 24rpx;
+    color: rgb(138, 125, 125)!important;
+}
+
+.rate {
+    position: relative;
+    height: 180rpx;
+}
+
+.btn {
+    position: absolute;
+    width: 100%;
+    top: -40rpx;
+}
+
+.btn>button {
+    width: 36%;
+    font-size: 28rpx!important;
+    border: 1rpx solid #CCC;
+    height: 80rpx;
+    border-radius: 40rpx;
+}
+
+.btn-start {
+    color: white;
+    background-color: red;
+}
+
+.btn-add {
+    background-color: white;
+    color: rgb(182, 165, 165);
+}
+
+.rates {
+    position: relative;
+}
+
+.new {
+    font-size: 24rpx;
+}
+
+.new>span:last-child {
+    color: rgb(22, 208, 233);
+}
+
+.new>span:first-child {
+    color: rgb(0, 0, 0);
+}
+
+.contain {
+    width: 60%;
+}
+
+.star-five,
+.new {
+    display: flex;
+    justify-content: center;
+}
+
+.deta {
+    width: 96%;
+    height: 50vh;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.item {
+    position: relative;
+    text-align: center;
+}
+
+.tab {
+    padding: 0 10rpx;
+    height: 30rpx;
+}
+
+.item>view {
+    text-align: center;
+}
+
+.line {
+    position: absolute;
+    width: 100%;
+    height: 4rpx;
+    background: red;
+    bottom: -20rpx;
+}
+
+.tops {
+    width: 100%;
+    height: 50rpx;
+    border-bottom: 1rpx solid #ccc;
+}
+
+.intro {
+    padding: 0 20rpx;
+}
+
+.bookintro {
+    font-size: 28rpx;
+}
+
+.menu {
+    width: 100%;
+    text-align: center;
+    background-color: #ccc;
+    margin: 10rpx 0;
+    color: rgb(47, 58, 58);
+    padding: 10rpx 0;
+}
+
+.recommend {
+    width: 100%;
+}
+
+.menu-icon {
+    width: 42rpx;
+}
+
+.icon {
+    width: 50rpx;
+    color: red;
+}
+
+.recommend-top {
+    font-size: 28rpx;
+}
+
+.img-icon {
+    color: #d81e06;
+}
+
+.recom {
+    width: 100%;
+}
+
+.recom>view {
+    width: 32%;
+}
+
+.recom-imgs {
+    width: 100%;
+}
+
+.recomment {
+    padding: 0 20rpx;
+}
+
+.recomment,
+.userIcon {
+    width: 100%;
+}
+
+.recomment>view {
+    padding: 10rpx 20rpx;
+    width: 100%;
+}
+
+.userImage {
+    width: 100rpx;
+    border-radius: 50%;
+}
+
+.userInfo {
+    width: 75%;
+}
+
+.userInfo>view {
+    padding-left: 20rpx;
+}
+
+.userName {
+    color: red;
+    font-size: 28rpx;
+}
+
+.userRecom {
+    font-size: 24rpx;
+    color: rgb(58, 42, 42);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.userIcon {
+    border-radius: 50%;
+}

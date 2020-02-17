@@ -1,0 +1,125 @@
+<view class="details">
+    <view class="top">
+       
+    </view>
+    <view class="middle flex .f-col j-center">
+        <view class="images">
+            <image class="imgs" bind:tap="imagPreView"  src="{{'https://statics.zhuishushenqi.com'+bookInfo.cover}}" mode="widthFix" />
+        </view>
+        <view class="booktitle">
+            {{bookInfo.title}}
+        </view>
+        <view class="book-author">
+            {{bookInfo.author}}
+        </view>
+    </view>
+    <view class="rate flex j-center a-center">
+        <view class="btn flex">
+            <button class="btn-start" bind:tap="toReader">开始阅读</button>
+            <button class="btn-add" wx:if="{{isadd===true}}" bind:tap="addTo">加入书架</button>
+            <button class="btn-add" wx:if="{{isadd===false}}" bind:tap="addTo">已加入书架</button>
+        </view>
+        <view class="contain">
+            <view class="rates">
+                <view class="star-five">
+                    <rate value="{{bookInfo.rating.score/2}}" disabled="{{true}}"></rate>
+                </view>
+                  
+            </view>
+            <view class="new">
+              <span>更新至:</span><span>{{bookInfo.lastChapter}}</span>
+            </view>
+              
+        </view>
+          
+          
+    </view>
+    <view class="deta">
+    <view class="tops">
+         <view class="flex tab">
+            <view wx:for="{{arr}}" wx:for-index="index" wx:for-item="item" wx:key="index" class="item m-l-1 f-1">
+                <view wx:if="{{index===0}}"  data-index="{{index}}" bind:tap="clickItem">
+                    {{item.name}}
+                </view>
+                <view wx:if="{{index===1}}" data-index="{{index}}" bind:tap="clickItem">
+                    {{item.name}}({{docs.length}})
+                </view>
+                <view class="line" wx:if="{{activeIndex===index}}">
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="contant">
+        <view wx:if="{{activeIndex===0}}" class="intro">
+         <scroll-view   class="scroll-view_H"  scroll-y="true" style="height: 760rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+            <view class="bookintro">
+            简介：{{bookInfo.longIntro}}
+            </view>
+            <view class="menu flex j-center a-center">
+             <image class="menu-icon" src="../../assets/images/menu.svg" mode="widthFix" >
+                            
+             </image>
+             <span>总目录({{chapters.length}}章)</span>
+                
+            </view>
+            <view class="recommend">
+                <view class="recommend-top flex j-between a-center">
+                    <view>
+                        看过这本书的人还在看
+                    </view>
+                    <view class="img-icon flex j-center a-center" bind:tap="getrecommend">
+                        <image class="icon" src="../../assets/images/refresh.svg" mode="widthFix" >
+                            
+                        </image>
+                       <span>换一换</span>
+                      
+                    </view>
+                      
+                </view>
+               <view class="flex recom j-between" >
+                   <view wx:for="{{books}}" bind:tap="toDetails" data-item="{{item}}" wx:key="index">
+                       <image class="recom-imgs" src="{{'https://statics.zhuishushenqi.com'+item.cover}}" mode="widthFix"/>
+                         
+                   </view>
+                     
+               </view>
+                 
+                  
+            </view>
+              
+              
+        </scroll-view>
+        </view>    
+        <view wx:if="{{activeIndex===1}}">
+             <scroll-view   class="scroll-view_H"  scroll-y="true" style="height: 760rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+                <view class="recomment">
+                    <view wx:for="{{docs}}" class="flex" wx:key="index">
+                        <view class="userImage">
+                            <image class="userIcon" src="{{'https://statics.zhuishushenqi.com'+item.author.avatar}}" mode="widthFix" lazy-load="false" binderror="" bindload="">
+                                
+                            </image>
+                        </view>
+                        <view class="userInfo">
+                            <view class="userName"> 
+                                {{item.author.nickname}}
+                            </view>
+                            <view class="userRecom"> 
+                                 {{item.content}}
+                            </view>
+                              
+                        </view>
+                          
+                          
+                    </view>
+                      
+                </view>
+                  
+             
+             </scroll-view>
+        </view>     
+    </view>
+    </view>
+      
+          
+</view>
+  

@@ -4,12 +4,35 @@
     line-height: 80rpx;
 }
 
+.top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 999;
+}
+
+.top2 {
+    height: 80rpx;
+}
+
+.top3 {
+    height: 160rpx;
+}
+
 .typeList>view {
     margin-right: 40rpx;
 }
 
 .selectColor {
     color: red;
+}
+
+.page-section-spacing {
+    border: 1px solid #ccc;
+    height: 80rpx;
+    line-height: 80rpx;
 }
 
 .page-section-spacing view {
@@ -27,4 +50,107 @@
 
 .scroll-view_H>view {
     display: inline-block!important;
+}
+
+
+/* 书籍详情 */
+
+.books {
+    width: 100%;
+}
+
+.bookItem {
+    width: 100%;
+}
+
+.images {
+    width: 30%;
+}
+
+.details {
+    padding: 5rpx 20rpx;
+    width: 70%;
+}
+
+.imgs {
+    width: 100%;
+}
+
+.book-title {
+    font-size: 32rpx;
+    font-weight: 800;
+}
+
+.book-author,
+.book-desc {
+    font-size: 24rpx;
+    color: rgb(158, 132, 132);
+}
+
+.book-desc {
+    display: -webkit-box;
+    overflow: hidden;
+    white-space: normal !important;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical
+}
+
+.book-tags view {
+    font-size: 24rpx;
+    padding: 3rpx;
+    color: white;
+    background: red;
+    border-radius: 3rpx;
+    margin-right: 5rpx;
+    margin-bottom: 5rpx;
+}
+
+.book-tags>view:nth-child(1) {
+    background: rgb(212, 74, 19);
+}
+
+.book-tags>view:nth-child(2) {
+    background: rgb(65, 224, 211);
+}
+
+.book-tags>view:nth-child(3) {
+    background: rgb(240, 26, 26);
+}
+
+.book-tags>view:nth-child(4) {
+    background: rgb(44, 150, 115);
+}
+
+.book-tags>view:nth-child(5) {
+    background: rgb(224, 32, 208);
+}
+
+.book-tags>view:nth-child(6) {
+    background: rgb(231, 118, 222);
+}
+
+.book-tags>view:nth-child(7) {
+    background: rgb(71, 175, 30);
+}
+
+.book-tags>view:nth-child(8) {
+    background: rgb(146, 26, 86);
+}
+
+.book-tags>view:nth-child(9) {
+    background: rgb(0, 255, 0);
+}
+
+.book-tags>view:nth-child(10) {
+    background: rgb(151, 134, 76);
+}
+
+.book-tags>view:nth-child(11) {
+    background: rgb(85, 41, 81);
+}
+
+.book-tags>view:nth-child(12) {
+    background: rgb(31, 131, 98);
 }

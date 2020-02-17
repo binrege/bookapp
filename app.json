@@ -3,13 +3,15 @@
         "pages/index/index",
         "pages/bookCity/bookCity",
         "pages/search/search",
+        "pages/details/details",
+        "pages/reader/reader",
         "pages/bookCats/bookCats"
 
     ],
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#f46",
-        "navigationBarTitleText": "小说阅读",
+        "navigationBarTitleText": "",
         "navigationBarTextStyle": "white"
     },
     "tabBar": {
